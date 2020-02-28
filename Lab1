@@ -1,4 +1,7 @@
 #Task 1
+Створити змінні базових (atomic) типів. Базові типи: character, numeric,
+integer, complex, logical.
+
 > ch <- 'a'
 > print(class(ch))
 [1] "character"
@@ -16,6 +19,8 @@
 [1] "logical"
 >
 #Task 2
+Створити вектори, які: містить послідовність з 5 до 75; містить числа 3.14,
+2.71, 0, 13; 100 значень TRUE. 
 
 > v1 <- c(5:75)
 > print(class(v1))
@@ -46,7 +51,9 @@
 >
 >
 #Task 3
->
+Створити матрицю за допомогою matrix, та за допомогою cbind
+або rbind
+
 > m1 <- matrix(c(0.5, 1.3, 3.5, 3.9, 131, 2.8, 0, 2.2, 4.6, 2, 7, 5.1), nrow=4, byrow = TRUE)
 > print(class(m1))
 [1] "matrix"
@@ -69,7 +76,7 @@
 >
 >
 #Task 4
->
+Створити довільний список (list), в який включити всі базові типи.
 >
 >
 > my_list <- list('z', 12.3, 123L, 12+3i, FALSE)
@@ -92,6 +99,8 @@
 [1] FALSE
 
 #Task 5
+Створити фактор з трьома рівнями «baby», «child», «adult».
+
 
 > my_factor <- factor(c('baby', 'child', 'baby', 'baby', 'adult', 'child', 'child', 'adult'))
 > print(class(my_factor))
@@ -101,17 +110,21 @@
 Levels: adult baby child
 >
 #Task 6
-
+Знайти індекс першого значення NA в векторі 1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11.
 >
 > my_vector <- c(1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11)
 > match(NA, my_vector)
 [1] 5
->
+
+> Знайти кількість значень NA
+
 > print(length(which(is.na(my_vector))))
 [1] 3
 >
 >
 #Task 7
+Створити довільний data frame та вивести в консоль
+
 > my_dataframe <- data.frame(d1 = c(5:8), d2 = c('hi','my', 'dear', 'friend'), d3 = c(TRUE, FALSE, TRUE, TRUE))
 > print(my_dataframe)
  d1     d2    d3
@@ -121,6 +134,8 @@ Levels: adult baby child
 4  8 friend  TRUE
 >
 #Task 8
+Змінити імена стовпців цього data frame.
+
 > names(my_dataframe) <- c('numbers', 'charaters', 'logicals')
 > print(my_dataframe)
  numbers charaters logicals
