@@ -1,4 +1,5 @@
 #Таsk 1 Створ ф-ю з заданими аргументами
+
 pmean <- function(pollutant, id = 1:332, directory="C:/Users/Mary/Documents/specdata") {
 #Зчитуємо файл, надавши формат номеру. Задаємо забруднювач у формі списку.
   data1 = sapply(id, function(i) read.csv(paste(directory, "/", formatC(i,width = 3, flag = "0"), ".csv", sep=""))[[pollutant]])
